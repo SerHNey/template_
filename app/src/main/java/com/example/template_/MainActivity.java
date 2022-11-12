@@ -3,9 +3,11 @@ package com.example.template_;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -24,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.btnlogin);
 
     }
+    public void Reg(View view){
+        Intent reg = new Intent(MainActivity.this,reg.class);
+        startActivity(reg);
+    }
+
     final TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {

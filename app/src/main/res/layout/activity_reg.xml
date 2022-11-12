@@ -13,16 +13,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/abel"
-        android:text="Log In"
+        android:text="Register"
         android:textColor="@color/text"
         android:textSize="38sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fullname"
+        android:layout_width="359dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/text"
+        android:background="@drawable/textinput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/textinput"
+            android:fontFamily="@font/abel"
+            android:hint="Full name"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_t"
         android:layout_width="359dp"
         android:layout_height="55dp"
-        android:layout_below="@+id/login"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/fullname"
         android:textColorHint="@color/text"
         android:background="@drawable/textinput">
 
@@ -64,6 +86,29 @@
             android:textSize="18sp"
             tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/conf_pass_t"
+        android:layout_width="359dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/pass_t"
+        android:layout_marginTop="17dp"
+        android:textColorHint="@color/text"
+        android:background="@drawable/textinput"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@id/conf_pass_t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Confirm passoword"
+            android:fontFamily="@font/abel"
+            android:background="@drawable/textinput"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <TextView
@@ -73,7 +118,7 @@
         android:textColor="@color/text"
         android:textSize="18sp"
         android:fontFamily="@font/abel"
-        android:layout_below="@+id/pass_t"
+        android:layout_below="@+id/conf_pass_t"
         android:layout_marginTop="14dp"
         android:layout_alignEnd="@id/login_t"
         android:text="Forget password?">
@@ -100,13 +145,14 @@
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/text"
         android:layout_height="wrap_content"
         android:layout_below="@id/textview"
-        android:text="Login"
+        android:text="Register"
         android:textAllCaps="false"
-        android:background="@drawable/button_login"/>
+        android:background="@drawable/button_login"
+        android:onClick="acceptcreateacc"/>
     <TextView
         android:id="@+id/or"
         android:layout_width="wrap_content"
@@ -142,16 +188,14 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/textinput"
         android:layout_alignEnd="@id/pass_t"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:text="@string/log"
         android:fontFamily="@font/abel"
-        android:onClick="Reg"
-        android:text="@string/restr"
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textSize="20sp"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:onClick="logIn"/>
 </RelativeLayout>
