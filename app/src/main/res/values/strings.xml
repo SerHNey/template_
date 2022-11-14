@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">template_</string>
+    <string name="restr">Don\'t have an account? Let’s <b>Register</b></string>
+    <string name="log">Have account? Let’s <b>Log In</b></string>
+</resources>
